@@ -1,0 +1,99 @@
+<nav class="navbarcomp navbar navbar-expand navbar-dark bg-dark px-2">
+  <div class="side-nav-button p-2 me-3 text-light">
+    <button mat-icon-button><mat-icon>list</mat-icon></button>
+  </div>
+
+  <a class="navbar-brand px-4" href="#">Swerve</a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navmenu"
+  >
+    <span>button</span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+    <ul class="navbar-nav align-items-center mx-3">
+      <li class="nav-item">
+        <a class="nav-link me-3" aria-current="page" href="#">Ahmed Raza</a>
+      </li>
+      <li class="nav-item me-4">
+        <button
+          mat-icon-button
+          [matMenuTriggerFor]="notifications"
+          yPosition="above"
+        >
+          <mat-icon class="dee-icon">notifications</mat-icon>
+        </button>
+        <mat-menu #notifications="matMenu">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voicemail</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+        </mat-menu>
+      </li>
+      <li class="nav-item me-4">
+        <button mat-icon-button [matMenuTriggerFor]="settings">
+          <mat-icon class="dee-icon">settings</mat-icon>
+        </button>
+        <mat-menu #settings="matMenu">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voicemail</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+        </mat-menu>
+      </li>
+      <li class="nav-item">
+        <button mat-icon-button>
+          <mat-icon class="dee-icon">logout</mat-icon>
+        </button>
+      </li>
+      <!-- <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle d-flex align-items-center"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
+            class="rounded-circle"
+            height="22"
+            alt="Portrait of a Woman"
+            loading="lazy"
+          />
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li>
+            <a class="dropdown-item" href="#">My profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Settings</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Logout</a>
+          </li>
+        </ul>
+      </li> -->
+    </ul>
+  </div>
+</nav>
